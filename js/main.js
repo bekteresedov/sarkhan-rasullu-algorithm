@@ -126,3 +126,232 @@
 // console.log(factorial(5));
 
 //----------------------------------------------------------------
+
+// 7.
+// Verilen string-in tersi ile duzunun bir birine beraber olub olmadigi
+
+// const a = "SOS";
+
+// let result = "";
+// for (let i = 0; i < a.length; i++) {
+//   result += a[a.length - i - 1];
+// }
+
+// console.log(a === result);
+
+// ----------------------------------------------------------------
+
+// 8. Daxil edilen reqemlerin tersi ile duzunun eyni olub olmadigini teyin eden method yazin
+// Meselen 545 ve 545  duzdur amma 574 475 sehvdir
+
+// let eded = 123;
+
+// let ters = 0;
+
+// while (eded > 0) {
+//   let qaliq = eded % 10;
+//   ters *= 10;
+//   ters += qaliq;
+//   eded = eded / 10;
+//   eded = parseInt(eded);
+// }
+// console.log(ters === eded);
+
+// ----------------------------------------------------------------
+// 9.Method 1 reqem, bir simvol ve 1 boolean qebul edir.
+// public static void foo(int defe, char simvol, boolean altAlta)
+
+// foo(3,’F’, true);
+// F
+// F
+// F
+// foo(3,’F’, false); FFF
+
+// a qeder c simvolunu chap etsin. altAlta dəyişəni true-dursa altAlta eks halda yan yana chap etsin.
+
+// function foo(reqem, simvol, bool) {
+//   let res = "";
+//   for (let i = 0; i < reqem; i++) {
+//     console.log();
+//   }
+// }
+
+// foo(3, "a", true);
+
+// ------------------------------------------------------------------------------------------------
+// 10.method 3 reqem qebul edir a,b,c,
+// public static void foo(int a, int b, int c)
+
+// a-dan b-ye qeder butun ededleri c qeder quvvete yukseldir Math.pow-dan istifadə edərək
+
+// foo(1,5,2) ->   1^2=1;  2^2=4; 3^2=9, 4^2=16, 5^2=25
+
+// function foo(a, b, c) {
+//   for (var i = a; i <= b; i++) {
+//     console.log(Math.pow(i, c));
+//   }
+// }
+
+// foo(1, 10, 3);
+
+// ----------------------------------------------------------------
+
+// 12.methoda daxil edilen reqemin musbet, menfi yoxsa 0 oldugunu teyin eden method yazin.
+// Eger menfidirse method geriye -1 qaytarsin, 0-dirsa 0, musbetdirse +1 qaytarsin.
+
+// function foo(a) {
+//   if (a > 0) return 1;
+//   else if (a === 0) return 0;
+//   else return -1;
+// }
+
+// console.log(foo(-10));
+
+// ----------------------------------------------------------------
+
+// 13. Methoda 4 reqem daxil edilir eger bu reqemlerden her hansisa 2-si bir birine beraberdirse geriye true qaytarsin. Tip: Massiv istifade edin
+// 4 5 3 6
+
+// function foo(a, b, c, d) {
+//   var array = [a, b, c, d];
+//   for (var i = 0; i < array.length - 1; i++) {
+//     for (var j = i + 1; j < array.length; j++) {
+//       if (array[i] === array[j]) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// }
+// console.log(foo(21, 21, 3, 10));
+
+// ----------------------------------------------------------------
+
+// 14. Methoda 4 reqem daxil edilir.a,b,c,d  eger ededler artan ardicilliqla daxil edilibse geriye true qaytarsin eks halda false
+// 4 5 6 2
+
+// function foo(a, b, c, d) {
+//   var array = [a, b, c, d];
+//   for (var i = 0; i < array.length - 1; i++) {
+//     for (var j = i + 1; j < array.length; j++) {
+//       if (array[i] > array[j]) return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(foo(231, 311, 336, 1030));
+
+// ----------------------------------------------------------------
+
+// 15. Method bir String ve bir int qebul edir ve hemin String-in hemin index-inde olan simvolunu qaytarsin.
+// Meselen: method(“Salam”, 4)  m herfini return edecek
+
+// function foo(str, int) {
+//   return str.charAt(int);
+// }
+
+// console.log(foo("Salam", 4));
+
+// ----------------------------------------------------------------
+
+// 16.  Method 2 String qebul edir ve onlarin beraber olub olmadigini return edir true ve ya false
+// method(“Salam”,”Salam”);
+
+// function foo(str1, str2) {
+//   return str1 === str2;
+// }
+
+// console.log(foo("Salam", "Salam"));
+
+// ----------------------------------------------------------------
+
+// 17.Method String s, char c, int count qebul edir.  S-i count qeder c ile birleshdirir ve geriye return edir
+
+// foo(String s, char c, int count){}
+
+// foo(“Soz”, ‘c’, 5); -> Sozccccc
+
+// function foo(s, c, count) {
+//   for (var i = 0; i < count; i++) {
+//     s += c;
+//   }
+//   return s;
+// }
+
+// console.log(foo("Soz", "c", 5));
+
+// ----------------------------------------------------------------
+
+// 18. Method 3 String qebul edir.  String a, String b, String c.
+// A ve b-nin ichinde c varsa onda true eks halda false
+
+// function foo(a, b, c) {
+//   if (a.includes(c) && b.includes(c)) return true;
+//   return false;
+// }
+
+// console.log(foo("Alma Armud", "Armud Heyva Alma", "Armud"));
+
+// ----------------------------------------------------------------
+
+// 19.method String a, int begin, int end daxil edilir.     A-nin begin ve end arasini alt alta chap edir.
+// (“Hello World”, 3,7) netice olacaq:
+// l
+
+// o
+// W
+// function foo(a, b, e) {
+//   for (var i = b; i < e; i++) {
+//     console.log(a[i]);
+//   }
+// }
+// console.log(foo("Hello world!", 3, 7));
+
+// ----------------------------------------------------------------
+
+// 20.2 soz daxil edilir uzunlugu boyuk olan String geriye return edilir.
+// “Hello”, “Hello World”  -> Hello World return olacaq
+
+// function foo(s1, s2) {
+//   return s1.length > s2.length
+//     ? s1
+//     : s1.length === s2.length
+//     ? "Beraberdiler"
+//     : s2;
+// }
+
+// console.log(foo("Hello, world!", "Hello, world!"));
+
+// ----------------------------------------------------------------
+// 21.Ele bir method yazin ki:  HeLLo WorlD-> chevrilsin olsun hEllO wORLd.
+// Yeni boyuk herfler kichikle, kichik herfler boyukle evez olsun
+// hint:  ya ASCII ←--interviewlarda bu ustun tutulur
+// Ya da String-in funksiyalari: toLowerCase(), toUpperCase() istifade edin
+
+// function foo(s) {
+//   var array = s.split("");
+//   for (var i = 0; i < array.length; i++) {
+//     if (array[i].toUpperCase() === array[i]) array[i] = array[i].toLowerCase();
+//     else array[i] = array[i].toUpperCase();
+//   }
+//   return array.join("");
+// }
+
+// console.log(foo("AlmA"));
+
+// ----------------------------------------------------------------
+
+// 22.
+// ”       Salam    necesen        ishler nece          gedir       “   ←-----   metnini
+// “Salam necesen ishler nece gedir” ←--------      halina getirin.
+
+// var str = `       Salam    necesen        ishler nece          gedir       `;
+// str = str.split(" ");
+// var result = "";
+// for (var i = 0; i < str.length; i++) {
+//   if (str[i] !== "") {
+//     result += str[i] + " ";
+//   }
+// }
+// console.log(result.trim());
